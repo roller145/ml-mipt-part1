@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<Account Balance &le; 2.5<br/>gini = 0.42<br/>samples = 1000<br/>value = [300, 700]<br/>class = creditable>, fillcolor="#399de592"] ;
+1 [label=<Duration of Credit (month) &le; 22.5<br/>gini = 0.4933<br/>samples = 543<br/>value = [240, 303]<br/>class = creditable>, fillcolor="#399de535"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<gini = 0.4528<br/>samples = 306<br/>value = [106, 200]<br/>class = creditable>, fillcolor="#399de578"] ;
+1 -> 2 ;
+3 [label=<gini = 0.4914<br/>samples = 237<br/>value = [134, 103]<br/>class = non creditable>, fillcolor="#e581393b"] ;
+1 -> 3 ;
+4 [label=<Length of current employment &le; 3.5<br/>gini = 0.2281<br/>samples = 457<br/>value = [60, 397]<br/>class = creditable>, fillcolor="#399de5d8"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label=<gini = 0.2966<br/>samples = 243<br/>value = [44, 199]<br/>class = creditable>, fillcolor="#399de5c7"] ;
+4 -> 5 ;
+6 [label=<gini = 0.1384<br/>samples = 214<br/>value = [16, 198]<br/>class = creditable>, fillcolor="#399de5ea"] ;
+4 -> 6 ;
+}
